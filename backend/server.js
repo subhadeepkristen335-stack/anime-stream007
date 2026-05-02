@@ -10,7 +10,10 @@ const userRoutes = require('./routes/users');
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: 'https://anime-stream007.vercel.app',
+  credentials: true
+}));
 app.use(express.json());
 
 // MongoDB Connection

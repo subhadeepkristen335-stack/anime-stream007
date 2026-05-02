@@ -12,10 +12,7 @@
     }
   ],
   "routes": [
-    { "src": "/auth/(.*)", "dest": "backend/server.js" },
-    { "src": "/animes/(.*)", "dest": "backend/server.js" },
-    { "src": "/user/(.*)", "dest": "backend/server.js" },
-    { "src": "/health", "dest": "backend/server.js" },
+    { "src": "/api/(.*)", "dest": "backend/server.js" },
     { "handle": "filesystem" },
     { "src": "/(.*)", "dest": "/index.html" }
   ]

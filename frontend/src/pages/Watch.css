@@ -1,0 +1,172 @@
+.watch-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.video-container {
+  width: 100%;
+  margin-bottom: 30px;
+  background: #000;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  display: block;
+}
+
+.watch-content {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 30px;
+}
+
+.episode-info h1 {
+  font-size: 1.8rem;
+  margin: 0 0 15px 0;
+  color: #333;
+}
+
+.episode-info .description {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-like {
+  background: white;
+  color: #666;
+  border: 2px solid #ddd;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.btn-like:hover {
+  border-color: #e91e63;
+  color: #e91e63;
+}
+
+.btn-like.liked {
+  background: #e91e63;
+  color: white;
+  border-color: #e91e63;
+}
+
+.comments-section {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  height: fit-content;
+}
+
+.comments-section h2 {
+  font-size: 1.2rem;
+  margin: 0 0 20px 0;
+  color: #333;
+}
+
+.comment-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.comment-form input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+.comment-form input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.1);
+}
+
+.comment-form button {
+  padding: 10px 20px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.2s;
+}
+
+.comment-form button:hover {
+  transform: translateY(-2px);
+}
+
+.login-prompt {
+  text-align: center;
+  color: #999;
+  margin-bottom: 20px;
+}
+
+.login-prompt a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.comments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.comment {
+  padding: 10px;
+  background: white;
+  border-radius: 4px;
+  border-left: 3px solid #667eea;
+}
+
+.comment strong {
+  color: #333;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.comment p {
+  margin: 0 0 8px 0;
+  color: #666;
+  word-break: break-word;
+}
+
+.comment small {
+  color: #999;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+  .watch-content {
+    grid-template-columns: 1fr;
+  }
+
+  .comments-section {
+    height: auto;
+  }
+
+  .video-container iframe {
+    height: 350px;
+  }
+
+  .comments-list {
+    max-height: none;
+  }
+}

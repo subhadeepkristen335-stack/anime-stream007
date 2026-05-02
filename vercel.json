@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "backend/server.js",
+      "src": "backend/index.js",
       "use": "@vercel/node"
     },
     {
@@ -12,10 +12,10 @@
     }
   ],
   "routes": [
-    { "src": "/auth/(.*)", "dest": "backend/server.js" },
-    { "src": "/animes/(.*)", "dest": "backend/server.js" },
-    { "src": "/user/(.*)", "dest": "backend/server.js" },
-    { "src": "/health", "dest": "backend/server.js" },
+    { "src": "/auth/(.*)", "dest": "backend/index.js" },
+    { "src": "/animes/(.*)", "dest": "backend/index.js" },
+    { "src": "/user/(.*)", "dest": "backend/index.js" },
+    { "src": "/health", "dest": "backend/index.js" },
     { "src": "/(.*)", "dest": "frontend/dist/$1" }
   ]
 }
